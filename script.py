@@ -18,10 +18,8 @@ print("")
 
 if client_count_kafka == k8s_count_kafka:
     print('Compare result: Ok')
-elif client_count_kafka != k8s_count_kafka:
-    print('Compare result: Not ok')
 else:
-    print('Compare result: Error')
+    print('Compare result: Not ok')
 
 print('----------------------------------')
 
@@ -38,11 +36,9 @@ print("")
 
 if client_count_gateway == k8s_count_gateway:
     print('Compare result: Ok')
-elif client_count_gateway != k8s_count_gateway:
-    print('Compare result: Not ok')
 else:
-    print('Compare result: Error')
-
+    print('Compare result: Not ok')
+    
 print('----------------------------------')
 
 client_count_pipeline = (int(config.get('k8s.pods.number', 'pipeline')))
@@ -58,10 +54,8 @@ print("")
 
 if client_count_pipeline == k8s_count_pipeline:
     print('Compare result: Ok')
-elif client_count_pipeline != k8s_count_gateway:
-     print('Compare result: Not ok')
 else:
-    print('Compare result: Error')
+    print('Compare result: Not ok')
 
 print('----------------------------------')
 
@@ -78,10 +72,8 @@ print("")
 
 if client_count_cassandra == k8s_count_cassandra:
     print('Compare result: Ok')
-elif client_count_cassandra != k8s_count_cassandra:
-    print('Compare result: Not ok')
 else:
-    print('Compare result: Error')
+    print('Compare result: Not ok')
 
 print('----------------------------------')
 
@@ -98,9 +90,7 @@ print("")
 
 if client_count_query == k8s_count_query:
     print('Compare result: Ok')
-elif client_count_query != k8s_count_query:
-    print('Compare result: Not ok')
 else:
-    print('Compare result: Error')
+    print('Compare result: Not ok')
 
 print('----------------------------------')
