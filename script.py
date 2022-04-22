@@ -4,9 +4,9 @@ import subprocess
 
 config = ConfigParser.RawConfigParser()
 
-config.read('k8s.config') #Читаем cfg пользователя 
-client_count_kafka = (int(config.get('k8s.pods.number', 'kafka'))) #Указываю, что буду сравнивать
-k8s_count_kafka = (int(subprocess.check_output("kubectl describe statefulset timeseries-kafka | grep 'Pods Status: .*$' | awk '{print $3}'", shell=True))) #Вытаскиваю ифну из кубера 
+config.read('k8s.config')  
+client_count_kafka = (int(config.get('k8s.pods.number', 'kafka'))) 
+k8s_count_kafka = (int(subprocess.check_output("kubectl describe statefulset timeseries-kafka | grep 'Pods Status: .*$' | awk '{print $3}'", shell=True)))  
 
 print('<__Kafka__>')
 print('')
